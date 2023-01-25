@@ -127,7 +127,7 @@ void calculate_parent(ll n)
 
 int kth_parent(int u, int k)
 {
-    for(int b=20; b>=0; b--)
+    for(int b=19; b>=0; b--)
     {
         if((k>>b)&1)
         {
