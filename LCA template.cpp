@@ -133,25 +133,25 @@ int kth_parent(int u, int k)
     }
     return u;
 }
-int LCA(int u, int v)
+int LCA(int u, int v1)
 {
-    if(depth[u] < depth[v]) swap(u, v);
-    int dif = depth[u]-depth[v];
+    if(depth[u] < depth[v1]) swap(u, v1);
+    int dif = depth[u]-depth[v1];
     u = kth_parent(u, dif);
-    if(u == v) return v;
+    if(u == v1) return v1;
     else
     {
 
         for(int k=19; k>=0; k--)
         {
-            if(par[u][k] != par[v][k] and par[u][k] != -1)
+            if(par[u][k] != par[v1][k] and par[u][k] != -1)
             {
                 u = par[u][k];
-                v = par[v][k];
+                v1= par[v1][k];
               //  cout<<u<<" "<<v<<endl;
             }
         }
-        return par[v][0];
+        return par[v1][0];
     }
 }
 
