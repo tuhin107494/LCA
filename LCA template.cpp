@@ -170,7 +170,7 @@ void input()
     v[r].pb(l);
   }
 
-  memset(par,-1,sizeof par);
+  //memset(par,-1,sizeof par);
 
   dfs(1,-1,0);
   calculate_parent(n);
